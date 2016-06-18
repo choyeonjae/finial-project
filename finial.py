@@ -39,12 +39,12 @@ while Zen<100 and Money>0:
     print("2.Donation (Zen +Your Donation Money x 10%, Money=You want)")
     print('3.voluntary service (Zen +10, Money -20)')
     print('4.deep bow (Zen +1)')
-    print('5.Buy temple(Small temple (+Zen +10 everytime, +Money +3 everytime, Money -100)\n Large temple (+Zen +15 everytime, +Money +5 everytime, Money -300))')
-    print('6.Go back to company, and Work! (Zen -3, Money +20)')
+    print('5.Go back to company, and Work! (Zen -3, Money +20)')
+    print('6.Buy temple(Small temple (+Zen +10 everytime, +Money +3 everytime, Money -100)\n Large temple (+Zen +15 everytime, +Money +5 everytime, Money -300))')
     collect=int(input('collect number(1-5) : '))
     print('')
     
-    if collect==5:
+    if collect==6:
         choose_temple=(int(input("What temple do you want to buy? small-1 Large-2 : ")))
         if choose_temple==1:
             Money=Money-100
@@ -52,6 +52,14 @@ while Zen<100 and Money>0:
             print('Now you can get +Zen +10 everytime, +Money +3 everytime Because of your temple', temple_name)
             small_temple_zen=Zen+10
             Zen=small_temple_zen
+            while Zen<100 and Money>0:
+                print("Money=", Money, 'Zen= ', Zen, 'count=', count)
+                print("1.Help people (Zen +5, Money -10)")
+                print("2.Donation (Zen +Your Donation Money x 10%, Money=You want)")
+                print('3.voluntary service (Zen +10, Money -20)')
+                print('4.deep bow (Zen +1)')
+                print('5.Go back to company, and Work! (Zen -3, Money +20)')
+                print('6.Buy temple(Small temple (Large temple (+Zen +15 everytime, +Money +5 everytime, Money -300))')
             
 
         elif choose_temple==2:
