@@ -41,7 +41,7 @@ while Zen<100 and Money>0:
     print('4.deep bow (Zen +1)')
     print('5.Go back to company, and Work! (Zen -3, Money +20)')
     print('6.Buy temple(Small temple (+Zen +10 everytime, +Money +3 everytime, Money -100)\n Large temple (+Zen +15 everytime, +Money +5 everytime, Money -300))')
-    collect=int(input('collect number(1-5) : '))
+    collect=int(input('collect number(1-6) : '))
     print('')
     
     if collect==6:
@@ -60,6 +60,19 @@ while Zen<100 and Money>0:
                 print('4.deep bow (Zen +1)')
                 print('5.Go back to company, and Work! (Zen -3, Money +20)')
                 print('6.Buy temple(Small temple (Large temple (+Zen +15 everytime, +Money +5 everytime, Money -300))')
+                collect=int(input('collect number(1-6) : '))
+                if collect==6:
+                   print('You already buy small temple which name ', name)
+                   ask_Large_temple=int(input('You can only buy Large temple. Do you want keep continue? Y-1, N-2 : '))
+                   if ask_Large_temple==1:
+                       Money=Money-300
+                       temple_name=(input('Please enter the temple name : '))
+                       print('Now you can get +Zen +15 everytime, +Money +5 everytime Because of your temple', temple_name)
+                       large_temple_zen=Zen+15
+                       Zen=large_temple_zen
+                   elif ask_Large_temple==2:
+                       continue
+                   
             
 
         elif choose_temple==2:
