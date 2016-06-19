@@ -36,7 +36,16 @@ public class FinalGame{
       }
     }
     Collect_Zen(Money,Zen,Count);
+    System.out.println("Do you want new game? (Y-1, N-2)");
+    int new_Game=in.nextInt();
+    if (new_Game==1){
+      return;
     
+    }
+    else if (new_Game==2){
+  
+    
+    }
   }
   
   
@@ -54,7 +63,7 @@ public class FinalGame{
   public static void Collect_Zen (float Money,float Zen,int Count){
     Scanner in = new Scanner(System.in);
     System.out.println("----------------Collect Zen!---------------");
-    System.out.println("Money=" + Money + "Zen= " + Zen);
+    System.out.println("Money=" + Money+""+ "Zen= "+""+ Zen);
     System.out.println("");
     System.out.println("You have six ways to get Zen and Money! Here is ways");
     while (Zen<100 && Money>0){
@@ -77,10 +86,61 @@ public class FinalGame{
           System.out.println("Please enter the temple name : ");
           String temple_name = in.nextLine();
           System.out.println("Now you can get +Zen +10 everytime, +Money +3 everytime Because of your temple" + temple_name);
-          Count=Count+1;      
+          Count=Count+1; 
+          while (Zen<100 && Money>0){
+            System.out.println("Money=" + Money+""+ "Zen= "+""+ Zen);
+            System.out.println("1.Help people (Zen +5, Money -10)");
+            System.out.println("2.Donation (Zen +Your Donation Money x 10%, Money=You want)");
+            System.out.println("3.voluntary service (Zen +10, Money -20)");
+            System.out.println("4.deep bow (Zen +1)");
+            System.out.println("5.Go back to company, and Work! (Zen -3, Money +20)");
+            System.out.println("6.Buy Large temple(+Zen +15 everytime, +Money +5 everytime, Money -300)");
+            System.out.println("collect number(1-6) : ");
+            int Small_Collect = in.nextInt();
+            if (Small_Collect==1){
+              System.out.println("Help people...");
+              System.out.println("Thank you !");
+              Money=Money-7;
+              Zen=Zen+15;
+              Count=Count+1;
+              System.out.println("");
+            }
+            else if(Small_Collect==2){
+              System.out.println("How much do you want Donation? : ");
+              float Donation = in.nextFloat();
+              Money=Money-Donation-3;
+              Zen=Zen+15;
+              Count=Count+1;
+              System.out.println("");
+            }
+            else if(Small_Collect==3){
+              Count=Count+1;
+              System.out.println("Thank you for join us! Please care this poor dog...");
+              System.out.println("Wow! Dog get health! Please come here continue...");
+              Money=Money-17;
+              Zen=Zen+20;
+            }
+            else if(Small_Collect==4){
+              System.out.println("Save us, merciful Buddha!");
+              Zen=Zen+11;
+              Count=Count+1;
+              System.out.println("");
+              
+            }
+            else if(Small_Collect==5){
+              System.out.println("Work!");
+              Money=Money+20;
+              Zen=Zen-3;
+              Count=Count+1;
+              System.out.println("");
+            }
+            
+                               
+                             
+          }
         }
         else if (Choose_temple==2){
-          Money=Money-200;
+          Money=Money-300;
           System.out.println("Please enter the temple name : ");
           String temple_name = in.nextLine();
           System.out.println("Now you can get +Zen +15 everytime, +Money +5 everytime Because of your temple" +  temple_name);
@@ -123,6 +183,7 @@ public class FinalGame{
       else if (Collect == 5){
         System.out.println("Work!");
         Money=Money+20;
+        
         Zen=Zen-3;
         Count=Count+1;
         System.out.println("");
@@ -138,7 +199,6 @@ public class FinalGame{
       System.out.println("Congratulations! Now you are Buddhist monk!");
       
     }
-    
   }
   
 }
