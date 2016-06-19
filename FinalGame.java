@@ -120,7 +120,7 @@ public class FinalGame{
         Count=Count+1;
         System.out.println("");
       }
-      else if (Collect == 6){
+      else if (Collect == 5){
         System.out.println("Work!");
         Money=Money+20;
         Zen=Zen-3;
