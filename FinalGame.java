@@ -5,14 +5,14 @@ public static void main(String[] args){
   Scanner in = new Scanner(System.in);
   }
 
-public static player_name{
+public static player_name(){
   Scanner in = new Scanner(System.in);
   System.out.println("welcome!");
   System.out.println("What is your name? : ");
   String player_name = in.nextLine();
-  System.out.println("You need to collect 100 Zen points!\n cheer up!", player_name);
-  Money=0;
-  Zen=0;
+  System.out.println("You need to collect 100 Zen points! cheer up!" + player_name);
+  float Money=0;
+  float Zen=0;
   System.out.println("-------------GAME START--------------");
   
 }
@@ -21,8 +21,8 @@ public static Company (player_name){
   Scanner in = new Scanner(System.in);
   System.out.println("Do you want to hand in your resignatiod? Y-1 N-2 : ");
   int Company = in.nextLine();
-  i=0;
-  a=0;
+  int i=0;
+  int a=0;
   if (Company==1){
     System.out.println("Let's start! Now You can collect your Zen point!\nAnd also you get severance pay(money +100)");
     Money=Money+100;
